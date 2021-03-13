@@ -61,6 +61,12 @@ async def on_message(message):
         await message.channel.send("I don't really feel like THIS is a wow moment but you do you bro")
     if "bruh" in message.content.lower():
         await message.channel.send("bruhhhhh")
+    if "shut up" in message.content.lower():
+        await message.channel.send("no u")
+    if "gay" in message.content.lower():
+        await message.channel.send("It's 2020 bro")
+    if "bye" in message.content.lower():
+        await message.channel.send("Don't leave me! :(")
     if message.content.startswith("!quote"):
         quote = get_quote()
         await message.channel.send(quote)
