@@ -71,6 +71,10 @@ async def on_message(message):
         await message.channel.send("ur lame")
     if "suck" in message.content.lower():
         await message.channel.send("You suck!")
+    if "no u" in message.content.lower():
+        await message.channel.send("NO U")
+    if "noice" in message.content.lower():
+        await message.channel.send("cool cool cool")
     if message.content.startswith("!quote"):
         quote = get_quote()
         await message.channel.send(quote)
