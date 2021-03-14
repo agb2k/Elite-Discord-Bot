@@ -2,6 +2,11 @@ import discord
 import random
 import json
 import os
+import requests
+
+
+response = requests.get('https://api.jsonbin.io/b/604e56bb7ea6546cf3dd906a')
+quotes_json = response.json()
 
 # Connect to discord server
 client = discord.Client()
@@ -9,9 +14,9 @@ client = discord.Client()
 
 # Function to get a quote
 def get_quote():
-    n = random.randrange(0, 8)
-    with open("quotes.json") as data:
-        quotes_json = json.load(data)
+    n = random.randrange(0, 13)
+    # with open("quotes.json") as data:
+    #     quotes_json = json.load(data)
 
     quote = "\"" + quotes_json[n]["Quote"] + "\" - " + quotes_json[n]["Name"]
 
@@ -78,6 +83,7 @@ async def on_message(message):
     if message.content.startswith("!quote"):
         quote = get_quote()
         await message.channel.send(quote)
+
 
 # Keeps password hidden from y'all
 token = os.environ.get('Elite_Bot_Token')
