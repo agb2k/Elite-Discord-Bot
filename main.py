@@ -35,14 +35,14 @@ async def on_message(message):
         await message.channel.send("Get a life, loser!")
     if "korra" in message.content.lower():
         await message.channel.send("Get a life, loser!")
-    if message.content.lower().startswith("nice") and len(message.content.split("nice")) > 1:
+    if message.content.lower().startswith("nice"):
         await message.channel.send("Is it nice tho???")
-    if message.content.lower().startswith("hi") and len(message.content.split("hi")) > 1:
+    if message.content.lower().startswith("hi") and message.content.split("hi")[1] == "":
         await message.channel.send("Hi bro")
     if message.content.lower().startswith("that's what she said") or message.content.lower().startswith("thats what "
                                                                                                         "she said"):
         await message.channel.send("That is not and will never be what she says, bro")
-    if "samima" in message.content.lower() and len(message.content.split("samima")) > 1:
+    if "samima" in message.content.lower():
         await message.channel.send("Lifehack #420: Mention you're Munavar's friend for a discount in Samima. Stonks!")
     if "abhi" in message.content.lower():
         await message.channel.send("I see you're talking to/about the coolest, smartest, hottest human to ever exist.")
@@ -54,7 +54,7 @@ async def on_message(message):
         await message.channel.send("Jude's busy watching Avatar right now")
     if "jeff" in message.content.lower():
         await message.channel.send("Kevin, bro???\n...\n...\n...\nYes, he is his bro")
-    if "lol" in message.content.lower() and len(message.content.split("lol")):
+    if "lol" in message.content.lower():
         await message.channel.send("Is it really that funny?")
     if "lmao" in message.content.lower():
         await message.channel.send("Is it REALLY that funny?????")
